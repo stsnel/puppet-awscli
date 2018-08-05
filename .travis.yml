@@ -62,8 +62,33 @@ matrix:
       env:
       - PUPPET_VERSION="4.10.0"
       - FIXTURES_YML=.puppet4.fixtures.yml
+   - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.0.1"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+    - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.1.0"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+    - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.2.0"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+    - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.3.7"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+    - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.4.0"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+    - rvm: 2.1.10
+      env:
+      - PUPPET_VERSION="5.5.3"
+      - FIXTURES_YML=.puppet5.fixtures.yml
+
 bundler_args: --without development
 script: bundle exec rake spec SPEC_OPTS='--format documentation' PARSER='future'
 notifications:
   email:
-    - justin@downing.us
+    - sietse@thehyve.nl
